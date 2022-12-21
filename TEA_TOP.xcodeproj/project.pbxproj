@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E4857652951B8DF0063BEAB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4857642951B8DF0063BEAB /* MenuViewController.swift */; };
+		6E4857672951C3670063BEAB /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4857662951C3670063BEAB /* MenuTableViewCell.swift */; };
 		6E6693ED29506287006F2986 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6693EC29506287006F2986 /* Decode.swift */; };
 		6E6693EF29506440006F2986 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6693EE29506440006F2986 /* Store.swift */; };
 		6E6693F12950644E006F2986 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6693F02950644E006F2986 /* Drink.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E4857642951B8DF0063BEAB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6E4857662951C3670063BEAB /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		6E6693EC29506287006F2986 /* Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decode.swift; sourceTree = "<group>"; };
 		6E6693EE29506440006F2986 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		6E6693F02950644E006F2986 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		6EBCED9C294C63B8004911AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6E4857662951C3670063BEAB /* MenuTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 		6EBCED9D294C63C3004911AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6E4857642951B8DF0063BEAB /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +199,8 @@
 				6E6693F32950645A006F2986 /* OrderDrink.swift in Sources */,
 				6E6693ED29506287006F2986 /* Decode.swift in Sources */,
 				6E6693F72950646F006F2986 /* Variables.swift in Sources */,
+				6E4857672951C3670063BEAB /* MenuTableViewCell.swift in Sources */,
+				6E4857652951B8DF0063BEAB /* MenuViewController.swift in Sources */,
 				6EBCED89294C62C1004911AB /* SceneDelegate.swift in Sources */,
 				6E6693F12950644E006F2986 /* Drink.swift in Sources */,
 				6E6693EF29506440006F2986 /* Store.swift in Sources */,
