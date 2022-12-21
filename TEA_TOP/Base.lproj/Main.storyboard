@@ -20,6 +20,63 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5l-Dh-6xA">
                                 <rect key="frame" x="0.0" y="82" width="390" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TRZ-nm-fLb">
+                                        <rect key="frame" x="15" y="20" width="645.33333333333337" height="38"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spi-Pw-W26">
+                                                <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="38"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="第一味青茶系">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="baseBackgroundColor" name="teatopblue"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eeC-RE-DU7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa2-Xn-dcq">
+                                                <rect key="frame" x="166.33333333333331" y="0.0" width="146.33333333333331" height="38"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="茶師推薦">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="baseBackgroundColor" name="teatopblue"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WAj-ry-65V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKb-3r-lg7">
+                                                <rect key="frame" x="332.66666666666669" y="0.0" width="146.33333333333331" height="38"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="找新鮮">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="baseBackgroundColor" name="teatopblue"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7YE-Yh-vXL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO4-4h-fQN">
+                                                <rect key="frame" x="498.99999999999994" y="0.0" width="146.33333333333331" height="38"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="找口感">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="baseBackgroundColor" name="teatopblue"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MDX-dp-FQO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TRZ-nm-fLb" firstAttribute="top" secondItem="FcF-QT-73B" secondAttribute="top" constant="20" id="0Sx-gZ-Iv4"/>
+                                    <constraint firstItem="TRZ-nm-fLb" firstAttribute="bottom" secondItem="FcF-QT-73B" secondAttribute="bottom" id="8AP-kY-4ZH"/>
+                                    <constraint firstItem="TRZ-nm-fLb" firstAttribute="leading" secondItem="FcF-QT-73B" secondAttribute="leading" constant="15" id="Ew5-Jm-7fX"/>
+                                    <constraint firstItem="TRZ-nm-fLb" firstAttribute="trailing" secondItem="FcF-QT-73B" secondAttribute="trailing" id="ZuN-wi-9g1"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="FcF-QT-73B"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="jl0-uf-DaI"/>
                             </scrollView>
@@ -47,7 +104,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg0-s0-mVP">
-                                                            <rect key="frame" x="253" y="52" width="24" height="24"/>
+                                                            <rect key="frame" x="253" y="52" width="40" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -61,14 +118,14 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq7-ij-RLM">
-                                                            <rect key="frame" x="307" y="52" width="24" height="24"/>
+                                                            <rect key="frame" x="307" y="52" width="40" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="招牌高山青" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2q-Qu-yMD">
-                                                            <rect key="frame" x="111" y="37" width="127" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="招牌高山青" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2q-Qu-yMD">
+                                                            <rect key="frame" x="100" y="14" width="127" height="68"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                             <nil key="textColor"/>
@@ -85,6 +142,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="drinkImageView" destination="Rds-zE-phd" id="wJJ-AL-WRy"/>
+                                            <outlet property="drinkbackgroundView" destination="hpM-gN-OgV" id="KEG-cL-Dlk"/>
                                             <outlet property="lPriceLabel" destination="yg0-s0-mVP" id="KfD-dF-WSz"/>
                                             <outlet property="lSizeLabel" destination="6nE-0p-dcA" id="Nzo-EU-dde"/>
                                             <outlet property="nameLabel" destination="s2q-Qu-yMD" id="nAn-Ox-bBr"/>
@@ -95,7 +153,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="飲品介紹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20s-4a-VF5">
-                                <rect key="frame" x="109" y="44" width="172" height="21"/>
+                                <rect key="frame" x="153.82048458149984" y="50" width="81.666666666666401" height="24.000000000000085"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" name="teatopblue"/>
@@ -106,6 +164,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="飲品" image="menucard" catalog="system" id="Pz1-Rq-dqX"/>
+                    <connections>
+                        <outlet property="scrollView" destination="c5l-Dh-6xA" id="BAQ-Kl-8tp"/>
+                        <outlet property="tableView" destination="I3J-xF-79f" id="ovN-3G-Y78"/>
+                        <outletCollection property="categoryButtons" destination="Spi-Pw-W26" collectionClass="NSMutableArray" id="nhq-jw-Bcg"/>
+                        <outletCollection property="categoryButtons" destination="wa2-Xn-dcq" collectionClass="NSMutableArray" id="6Go-Ab-e5R"/>
+                        <outletCollection property="categoryButtons" destination="wKb-3r-lg7" collectionClass="NSMutableArray" id="7xY-H3-YzJ"/>
+                        <outletCollection property="categoryButtons" destination="CO4-4h-fQN" collectionClass="NSMutableArray" id="sE1-ar-sMx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,8 +202,8 @@
                                             <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </activityIndicatorView>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
+                                <color key="backgroundColor" systemColor="labelColor"/>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
@@ -181,6 +247,9 @@
         <namedColor name="teatopblue">
             <color red="0.082352941176470587" green="0.21568627450980393" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

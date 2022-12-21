@@ -9,6 +9,7 @@ import UIKit
 
 class MenuTableViewCell: UITableViewCell {
     
+    @IBOutlet var drinkbackgroundView: UIView!
     @IBOutlet var drinkImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var lSizeLabel: UILabel!
