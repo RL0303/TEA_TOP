@@ -21,6 +21,7 @@
 		6EBCED90294C62C2004911AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCED8F294C62C2004911AB /* Assets.xcassets */; };
 		6EBCED93294C62C2004911AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCED91294C62C2004911AB /* LaunchScreen.storyboard */; };
 		6EBCEDA3294C65C4004911AB /* stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCEDA2294C65C4004911AB /* stores.json */; };
+		6EC57E87295431A3009FF256 /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC57E86295431A3009FF256 /* MenuDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		6EBCED92294C62C2004911AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EBCED94294C62C2004911AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EBCEDA2294C65C4004911AB /* stores.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stores.json; sourceTree = "<group>"; };
+		6EC57E86295431A3009FF256 /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				6E4857642951B8DF0063BEAB /* MenuViewController.swift */,
+				6EC57E86295431A3009FF256 /* MenuDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				6E6693ED29506287006F2986 /* Decode.swift in Sources */,
 				6E6693F72950646F006F2986 /* Variables.swift in Sources */,
 				6E4857672951C3670063BEAB /* MenuTableViewCell.swift in Sources */,
+				6EC57E87295431A3009FF256 /* MenuDetailViewController.swift in Sources */,
 				6E4857652951B8DF0063BEAB /* MenuViewController.swift in Sources */,
 				6EBCED89294C62C1004911AB /* SceneDelegate.swift in Sources */,
 				6E6693F12950644E006F2986 /* Drink.swift in Sources */,

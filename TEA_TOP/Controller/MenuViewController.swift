@@ -30,13 +30,12 @@ class MenuViewController: UIViewController {
         changeCategoryButtonStatus(selectedButton: categoryButtons[0])
         
         // swipe left/right to change category
-//        let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
-//        let swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
-//        swipeLeftGestureRecognizer.direction = .left
-//        swipeRightGestureRecognizer.direction = .right
-//        tableView.addGestureRecognizer(swipeLeftGestureRecognizer)
-//        tableView.addGestureRecognizer(swipeRightGestureRecognizer)
-        
+        let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
+        let swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
+        swipeLeftGestureRecognizer.direction = .left
+        swipeRightGestureRecognizer.direction = .right
+        tableView.addGestureRecognizer(swipeLeftGestureRecognizer)
+        tableView.addGestureRecognizer(swipeRightGestureRecognizer)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,6 +44,31 @@ class MenuViewController: UIViewController {
             fetchDrinkData()
         }
     }
+    
+    // MARK: - Swipe left/right to change category
+    @IBAction func swipeLeft() {
+        if currentButtonIndex < categoryButtons.count-1 {
+            currentButtonIndex += 1
+            categoryButtonPressed(categoryButtons[currentButtonIndex])
+        }
+    }
+    @IBAction func swipeRight() {
+        if currentButtonIndex >= 1 {
+            currentButtonIndex -= 1
+            categoryButtonPressed(categoryButtons[currentButtonIndex])
+        }
+    }
+    
+    // MARK: - Segue
+    
+    @IBSegueAction func showMenuDetail(_ coder: NSCoder) -> MenuDetailViewController? {
+        return MenuDetailViewController(coder: coder, drink: drinks[tableView.indexPathForSelectedRow!.row])
+    }
+    
+    @IBAction func unwindToMenuView(_ segue: UIStoryboardSegue) {
+        
+    }
+    
     
     // MARK: - Category Button
     
@@ -61,7 +85,7 @@ class MenuViewController: UIViewController {
         // let selected button scroll to middle
         let scrollLimit = scrollView.contentSize.width - scrollView.frame.width
         let xOffset = sender.center.x - scrollView.frame.width/2
-        print(scrollLimit, xOffset)
+//        print(scrollLimit, xOffset)
         if xOffset < 0 {
             scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         } else if xOffset > scrollLimit {
