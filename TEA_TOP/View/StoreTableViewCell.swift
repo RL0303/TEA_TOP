@@ -17,12 +17,14 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet var addressImageView: UIImageView! {
         didSet {
             addressImageView.image = UIImage(named: "place")?.withRenderingMode(.alwaysTemplate)
+            addressImageView.tintColor = UIColor(named: "teatop")
         }
     }
     @IBOutlet var phoneImageView: UIImageView!
     @IBOutlet var openingHoursImageView: UIImageView! {
         didSet {
             openingHoursImageView.image = UIImage(named: "time")?.withRenderingMode(.alwaysTemplate)
+            openingHoursImageView.tintColor = UIColor(named: "teatop")
         }
     }
 

@@ -17,46 +17,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="門市據點" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PI3-dT-Xrt">
-                                <rect key="frame" x="155" y="44" width="82" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" name="teatopblue"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="hCl-Hp-5zO">
-                                <rect key="frame" x="28" y="76" width="337" height="38"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hCl-Hp-5zO" userLabel="Area Stack View">
+                                <rect key="frame" x="15" y="73" width="360" height="38"/>
                                 <subviews>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzC-go-Rhn">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="38"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzC-go-Rhn">
+                                        <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="北部">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
                                             <color key="baseBackgroundColor" name="teatopblue"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="areaButtonPressed:" destination="qT7-MB-1xR" eventType="touchUpInside" id="VGX-ck-Ri6"/>
                                             <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ne-1X-oWx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXI-yE-Eno">
-                                        <rect key="frame" x="136" y="0.0" width="65" height="38"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXI-yE-Eno">
+                                        <rect key="frame" x="133.33333333333334" y="0.0" width="93.333333333333343" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="中部">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
                                             <color key="baseBackgroundColor" name="teatopblue"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="areaButtonPressed:" destination="qT7-MB-1xR" eventType="touchUpInside" id="6Wp-kE-S10"/>
                                             <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hw5-xY-5eq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqF-Hu-8Rd">
-                                        <rect key="frame" x="272" y="0.0" width="65" height="38"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqF-Hu-8Rd">
+                                        <rect key="frame" x="266.66666666666669" y="0.0" width="93.333333333333314" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="南部">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
                                             <color key="baseBackgroundColor" name="teatopblue"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="areaButtonPressed:" destination="qT7-MB-1xR" eventType="touchUpInside" id="N2W-B5-GHD"/>
                                             <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6UF-8X-vxB"/>
                                         </connections>
                                     </button>
@@ -66,55 +62,59 @@
                                 <rect key="frame" x="1" y="122" width="390" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="hzZ-rT-O8D">
-                                        <rect key="frame" x="10" y="10" width="545" height="38"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hzZ-rT-O8D">
+                                        <rect key="frame" x="10" y="10" width="445" height="38"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boQ-1T-CkY">
                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="38"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="臺北">
+                                                <buttonConfiguration key="configuration" style="filled" title="台北">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="baseBackgroundColor" name="teatopblue"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2wF-uy-mV0"/>
+                                                    <action selector="locationButtonPressed:" destination="qT7-MB-1xR" eventType="touchUpInside" id="Sko-EW-EqL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpw-gc-ITp">
-                                                <rect key="frame" x="120" y="0.0" width="65" height="38"/>
+                                                <rect key="frame" x="95" y="0.0" width="65" height="38"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="臺北">
+                                                <buttonConfiguration key="configuration" style="filled" title="新北">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="baseBackgroundColor" name="teatopblue"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2YS-xI-XO9"/>
+                                                    <action selector="locationButtonPressed:" destination="qT7-MB-1xR" eventType="touchUpInside" id="rZN-we-Jlt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nw-nK-vCN">
-                                                <rect key="frame" x="240" y="0.0" width="65" height="38"/>
+                                                <rect key="frame" x="190" y="0.0" width="65" height="38"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="臺北">
+                                                <buttonConfiguration key="configuration" style="filled" title="桃園">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="baseBackgroundColor" name="teatopblue"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="osl-Nu-GiM"/>
+                                                    <action selector="locationButtonPressed:" destination="qT7-MB-1xR" eventType="touchUpInside" id="VfT-He-4b7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ju6-Jq-8cf">
-                                                <rect key="frame" x="360" y="0.0" width="65" height="38"/>
+                                                <rect key="frame" x="285" y="0.0" width="65" height="38"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="臺北">
+                                                <buttonConfiguration key="configuration" style="filled" title="宜蘭">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="baseBackgroundColor" name="teatopblue"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UAe-1G-9ZH"/>
+                                                    <action selector="locationButtonPressed:" destination="qT7-MB-1xR" eventType="touchUpInside" id="s4v-tv-sVN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg1-hj-VG0">
-                                                <rect key="frame" x="480" y="0.0" width="65" height="38"/>
+                                                <rect key="frame" x="380" y="0.0" width="65" height="38"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="宜蘭">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -122,6 +122,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJV-fY-ApN"/>
+                                                    <action selector="locationButtonPressed:" destination="qT7-MB-1xR" eventType="touchUpInside" id="r96-n4-Rdn"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -141,7 +142,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StoreTableViewCell" rowHeight="170" id="QjM-0O-8nW" customClass="StoreTableViewCell" customModule="TEA_TOP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StoreTableViewCell" rowHeight="170" id="QjM-0O-8nW" customClass="StoreTableViewCell" customModule="TEA_TOP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="389" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QjM-0O-8nW" id="eAr-GP-56E">
@@ -149,7 +150,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="台北萬隆店" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F81-P5-ugu">
-                                                    <rect key="frame" x="20" y="17" width="107" height="26"/>
+                                                    <rect key="frame" x="20" y="17" width="349" height="26"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                     <nil key="textColor"/>
@@ -205,11 +206,42 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="門市據點" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PI3-dT-Xrt">
+                                <rect key="frame" x="154.33333333333334" y="44" width="81.666666666666657" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="teatopblue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="招牌高山青" id="YMA-jX-EFz">
+                                <rect key="frame" x="0.0" y="305" width="389" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JzE-Np-b8W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PI3-dT-Xrt" firstAttribute="top" secondItem="JzE-Np-b8W" secondAttribute="top" id="2kG-7W-PAm"/>
+                            <constraint firstItem="JzE-Np-b8W" firstAttribute="trailing" secondItem="hCl-Hp-5zO" secondAttribute="trailing" constant="15" id="Rcb-7g-I0f"/>
+                            <constraint firstItem="PI3-dT-Xrt" firstAttribute="centerX" secondItem="G0a-jZ-Ghp" secondAttribute="centerX" id="ZNm-MT-UKw"/>
+                            <constraint firstItem="hCl-Hp-5zO" firstAttribute="leading" secondItem="JzE-Np-b8W" secondAttribute="leading" constant="15" id="eZr-lw-E3O"/>
+                            <constraint firstItem="hCl-Hp-5zO" firstAttribute="top" secondItem="PI3-dT-Xrt" secondAttribute="bottom" constant="5" id="gPF-UV-STG"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="門市" image="location" catalog="system" id="fCa-qo-89A"/>
+                    <connections>
+                        <outlet property="locationScrollView" destination="zpW-Si-8Yh" id="AU1-85-Ejc"/>
+                        <outlet property="locationView" destination="hzZ-rT-O8D" id="V4b-OB-hcw"/>
+                        <outlet property="tableView" destination="6hg-cN-pix" id="chv-Hi-IpR"/>
+                        <outlet property="teatopImageView" destination="YMA-jX-EFz" id="3Yd-r6-Igf"/>
+                        <outletCollection property="areaButtons" destination="gzC-go-Rhn" collectionClass="NSMutableArray" id="zqs-Cr-hIq"/>
+                        <outletCollection property="areaButtons" destination="gXI-yE-Eno" collectionClass="NSMutableArray" id="5Pw-PA-kfV"/>
+                        <outletCollection property="areaButtons" destination="NqF-Hu-8Rd" collectionClass="NSMutableArray" id="k8K-vs-qhi"/>
+                        <outletCollection property="locationButtons" destination="boQ-1T-CkY" collectionClass="NSMutableArray" id="d0e-v7-olq"/>
+                        <outletCollection property="locationButtons" destination="xpw-gc-ITp" collectionClass="NSMutableArray" id="Y1j-ZF-0RK"/>
+                        <outletCollection property="locationButtons" destination="0nw-nK-vCN" collectionClass="NSMutableArray" id="qq2-I3-aQr"/>
+                        <outletCollection property="locationButtons" destination="Ju6-Jq-8cf" collectionClass="NSMutableArray" id="h0T-YT-cLF"/>
+                        <outletCollection property="locationButtons" destination="Xg1-hj-VG0" collectionClass="NSMutableArray" id="QDc-NW-0Bp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qza-cG-sNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,7 +392,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="飲品介紹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20s-4a-VF5">
-                                <rect key="frame" x="153.82048458149984" y="50" width="81.666666666666401" height="24.000000000000085"/>
+                                <rect key="frame" x="0.0" y="50" width="390" height="24.000000000000085"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" name="teatopblue"/>
@@ -517,9 +549,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NkR-PY-adp">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="teatop"/>
-                        <color key="tintColor" name="AccentColor"/>
-                        <color key="selectedImageTintColor" name="teatopblue"/>
+                        <color key="backgroundColor" name="teatopblue"/>
+                        <color key="barTintColor" name="teatopblue"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Wfs-gb-FEV"/>
@@ -538,11 +570,8 @@
         <image name="place" width="24" height="24"/>
         <image name="time" width="24" height="24"/>
         <image name="招牌高山青" width="249" height="350"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="teatop">
-            <color red="0.86274509803921573" green="0.45490196078431372" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.86299997568130493" green="0.45500001311302185" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="teatopblue">
             <color red="0.082352941176470587" green="0.21568627450980393" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
