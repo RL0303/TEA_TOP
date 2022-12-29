@@ -42,7 +42,6 @@ class StoreViewController: UIViewController {
     // MARK: - Location Button Pressed
     @IBAction func locationButtonPressed(_ sender: UIButton) {
         teatopImageView.isHidden = true
-        tableView.isHidden = false
         let location = sender.titleLabel!.text!
         getStores(location: location)
         changeButtonStatus(buttons: locationButtons, selectedButton: sender)
@@ -88,7 +87,10 @@ class StoreViewController: UIViewController {
                         print("hide",idx)
                     }
                 }
-
+//                let buttonWidth = locationButtons[0].frame.size.width
+//                let space: CGFloat = 10
+//                locationView.frame.size.width = max((CGFloat(locations.count) * (buttonWidth + space) + space), locationScrollView.frame.width)
+//                locationScrollView.contentSize = CGSize(width: locationView.frame.width, height: 0)
                 locationScrollView.setContentOffset(CGPoint(x:0, y: 0), animated: false)
                 changeButtonStatus(buttons: locationButtons, selectedButton: locationButtons[0])
                 getStores(location: locations[0])
