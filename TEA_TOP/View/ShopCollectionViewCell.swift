@@ -10,6 +10,7 @@ import UIKit
 class ShopCollectionViewCell: UICollectionViewCell {
     
     
+    @IBOutlet var cellBackgroundView: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
 }

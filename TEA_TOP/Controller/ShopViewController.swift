@@ -37,23 +37,39 @@ class ShopViewController: UIViewController {
     
 
     // MARK: - Cart Button
-//    func updateCartButton() {
-//        totalNumberOfCup = 0
-//        totalPrice = 0
-//        for orderDrink in orderDrinks {
-//            totalNumberOfCup += orderDrink.numberOfCup
-//            totalPrice += orderDrink.numberOfCup * orderDrink.pricePerCup
-//        }
-//        cartButton.configuration?.title = "購物車 $\(totalPrice)"
-//        guard let customFont = UIFont(name: "jf-openhuninn-1.1", size: 20) else { return }
-//        cartButton.configuration?.attributedTitle?.font = customFont
-//        if totalNumberOfCup > 0 {
-//            numberOfCupLabel.isHidden = false
-//            numberOfCupLabel.text = "\(totalNumberOfCup)"
-//        } else {
-//            numberOfCupLabel.isHidden = true
-//        }
-//    }
+    func updateCartButton() {
+        totalNumberOfCup = 0
+        totalPrice = 0
+        for orderDrink in orderDrinks {
+            totalNumberOfCup += orderDrink.numberOfCup
+            totalPrice += orderDrink.numberOfCup * orderDrink.pricePerCup
+        }
+        cartButton.configuration?.title = "購物車 $\(totalPrice)"
+        guard let customFont = UIFont(name: "jf-openhuninn-1.1", size: 20) else { return }
+        cartButton.configuration?.attributedTitle?.font = customFont
+        if totalNumberOfCup > 0 {
+            numberOfCupLabel.isHidden = false
+            numberOfCupLabel.text = "\(totalNumberOfCup)"
+        } else {
+            numberOfCupLabel.isHidden = true
+        }
+    }
+    
+    // MARK: - Minimize cart button when scrolling down
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        lastScrollViewOffsetY = scrollView.contentOffset.y
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > lastScrollViewOffsetY {
+            cartButton.configuration?.title = ""
+            cartButton.alpha = 0.8
+        } else {
+            cartButton.configuration?.title = "購物車 $\(totalPrice)"
+            cartButton.alpha = 1.0
+//            guard let customFont = UIFont(name: "jf-openhuninn-1.1", size: 20) else { return }
+//            cartButton.configuration?.attributedTitle?.font = customFont
+        }
+    }
     
     // MARK: - Categorize drinks
     func categorizeDrinks() {
@@ -95,6 +111,10 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let drink = drinkCategories[indexPath.section].drinks[indexPath.row]
         cell.imageView.image = UIImage(named: "招牌高山青") //UIImage(named: drink.name)
         cell.nameLabel.text = drink.name
+        cell.cellBackgroundView.layer.cornerRadius = 15
+        cell.cellBackgroundView.layer.borderWidth = 2
+        cell.cellBackgroundView.layer.borderColor = .init(red: 0, green: 0, blue: 0, alpha: 1)
+        cell.cellBackgroundView.backgroundColor = .white
         return cell
     }
     
@@ -112,5 +132,6 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
         flowLayout.sectionHeadersPinToVisibleBounds = true // 滑動時讓SectionHeader浮在最上方
         collectionView.collectionViewLayout = flowLayout
     }
+    
     
 }

@@ -294,7 +294,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <integer key="value" value="20"/>
@@ -305,6 +305,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="190" height="183"/>
                                         <connections>
+                                            <outlet property="cellBackgroundView" destination="zOJ-D7-hL6" id="yjP-ma-L0i"/>
                                             <outlet property="imageView" destination="BeI-BN-xUe" id="Qmr-sI-0Xy"/>
                                             <outlet property="nameLabel" destination="ahv-Oy-TUx" id="Gqb-FY-khJ"/>
                                         </connections>
@@ -335,9 +336,12 @@
                                 <color key="textColor" name="teatopblue"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gek-Ki-Erw">
-                                <rect key="frame" x="226" y="689" width="140" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gek-Ki-Erw">
+                                <rect key="frame" x="231" y="626" width="135.33333333333337" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="3Q9-XP-nro"/>
+                                    <constraint firstAttribute="height" constant="57" id="FDf-Ff-SN7"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="cart.fill" catalog="system" title="購物車" imagePadding="15" cornerStyle="large">
                                     <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="2">
@@ -350,16 +354,25 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6yU-1Q-lX6">
-                                <rect key="frame" x="354" y="673" width="30" height="30"/>
+                                <rect key="frame" x="354" y="615" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="teatopblue"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gqE-XK-xuP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gqE-XK-xuP" firstAttribute="bottom" secondItem="gek-Ki-Erw" secondAttribute="bottom" constant="78" id="Sux-5f-A3K"/>
+                            <constraint firstItem="gqE-XK-xuP" firstAttribute="trailing" secondItem="gek-Ki-Erw" secondAttribute="trailing" constant="23.670000000000002" id="U7O-CJ-FTM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="訂購" image="cart" catalog="system" id="q02-vc-Th0"/>
                     <connections>
@@ -495,7 +508,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="teatop"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="招牌高山青" translatesAutoresizingMaskIntoConstraints="NO" id="Rds-zE-phd">
                                                     <rect key="frame" x="14" y="5.3333339691162109" width="107" height="128"/>
