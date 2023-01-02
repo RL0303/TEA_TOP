@@ -24,7 +24,7 @@ class ShopViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        updateCartButton()
+        updateCartButton()
         
         // Collection View
         self.collectionView.delegate = self
@@ -36,6 +36,19 @@ class ShopViewController: UIViewController {
     }
     
 
+    // MARK: - Segue
+    @IBSegueAction func showShopDetail(_ coder: NSCoder) -> ShopDetailViewController? {
+        guard let indexPath = collectionView.indexPathsForSelectedItems else { return ShopDetailViewController(coder: coder, drink: allDrinks[0])}
+        let section = indexPath[0][0]
+        let row = indexPath[0][1]
+        let drink = drinkCategories[section].drinks[row]
+        return ShopDetailViewController(coder: coder, drink: drink)
+    }
+    
+    
+    @IBAction func unwindToShopView(_ segue: UIStoryboardSegue) {
+    }
+
     // MARK: - Cart Button
     func updateCartButton() {
         totalNumberOfCup = 0
@@ -45,8 +58,8 @@ class ShopViewController: UIViewController {
             totalPrice += orderDrink.numberOfCup * orderDrink.pricePerCup
         }
         cartButton.configuration?.title = "購物車 $\(totalPrice)"
-        guard let customFont = UIFont(name: "jf-openhuninn-1.1", size: 20) else { return }
-        cartButton.configuration?.attributedTitle?.font = customFont
+//        guard let customFont = UIFont(name: "jf-openhuninn-1.1", size: 20) else { return }
+//        cartButton.configuration?.attributedTitle?.font = customFont
         if totalNumberOfCup > 0 {
             numberOfCupLabel.isHidden = false
             numberOfCupLabel.text = "\(totalNumberOfCup)"

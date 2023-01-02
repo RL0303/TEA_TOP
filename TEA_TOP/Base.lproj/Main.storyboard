@@ -308,6 +308,7 @@
                                             <outlet property="cellBackgroundView" destination="zOJ-D7-hL6" id="yjP-ma-L0i"/>
                                             <outlet property="imageView" destination="BeI-BN-xUe" id="Qmr-sI-0Xy"/>
                                             <outlet property="nameLabel" destination="ahv-Oy-TUx" id="Gqb-FY-khJ"/>
+                                            <segue destination="djy-tD-ek4" kind="show" identifier="showShopDetail" destinationCreationSelector="showShopDetail:" id="WtU-bF-q82"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -384,6 +385,375 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jds-gQ-Wv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3.0769230769230766" y="855.92417061611366"/>
+        </scene>
+        <!--Shop Detail View Controller-->
+        <scene sceneID="Vsr-t3-pFE">
+            <objects>
+                <viewController id="djy-tD-ek4" customClass="ShopDetailViewController" customModule="TEA_TOP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tkr-zg-cyC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="招牌高山青" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hnc-R8-66w">
+                                <rect key="frame" x="66" y="12" width="259.00000000000006" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAL-MD-0en">
+                                <rect key="frame" x="342" y="15" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="kUa-v0-iVs" kind="unwind" unwindAction="unwindToShopView:" id="OYj-9W-9Z2"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oQv-M9-FKr">
+                                <rect key="frame" x="0.0" y="71" width="390" height="571"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="nHV-q3-9R3" kind="embed" destinationCreationSelector="showShopDetailTableView:" id="ql6-Rk-ScF"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="總金額：65元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNp-sW-RhA">
+                                <rect key="frame" x="32" y="713" width="193" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="Nps-Tb-FhO">
+                                <rect key="frame" x="30" y="661" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="numberStepper:" destination="djy-tD-ek4" eventType="valueChanged" id="ebT-xw-bn5"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1杯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-93-s1y">
+                                <rect key="frame" x="148" y="661" width="62" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcp-Df-0VJ">
+                                <rect key="frame" x="242" y="678" width="132" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="加入購物車" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" name="teatop"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tFJ-pB-k1O"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eos-Co-XvS"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="Hnc-R8-66w" id="sJ3-NW-fkf"/>
+                        <outlet property="totalNumberLabel" destination="cKz-93-s1y" id="0jx-hf-U0P"/>
+                        <outlet property="totalPriceLabel" destination="dNp-sW-RhA" id="ZXF-Ks-2Yh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynX-FV-ykm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kUa-v0-iVs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="924.61538461538453" y="855.92417061611366"/>
+        </scene>
+        <!--Shop Detail Table View Controller-->
+        <scene sceneID="C6q-sP-5Se">
+            <objects>
+                <tableViewController id="nHV-q3-9R3" customClass="ShopDetailTableViewController" customModule="TEA_TOP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="bxy-Gs-edb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="eux-c5-XxR">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="250"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="招牌高山青" id="Hm8-d3-THA">
+                                    <rect key="frame" x="86" y="31" width="218" height="188"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="杯型" id="Rw5-Qd-i8U">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="57" id="b1e-4f-UVo">
+                                        <rect key="frame" x="20" y="299" width="350" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b1e-4f-UVo" id="4H5-gn-b9w">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-qa-AcJ">
+                                                    <rect key="frame" x="116.66666666666666" y="9.6666666666666643" width="116.66666666666666" height="38"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ban-Ri-JdR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="38"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="L">
+                                                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <color key="baseBackgroundColor" name="teatopblue"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJj-A6-ElS">
+                                                            <rect key="frame" x="68.333333333333329" y="0.0" width="48.333333333333329" height="38"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="XL">
+                                                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <color key="baseBackgroundColor" name="teatopblue"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="a0D-qa-AcJ" firstAttribute="centerY" secondItem="4H5-gn-b9w" secondAttribute="centerY" id="Nci-B7-vCS"/>
+                                                <constraint firstItem="a0D-qa-AcJ" firstAttribute="centerX" secondItem="4H5-gn-b9w" secondAttribute="centerX" id="wkX-0K-O2V"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="溫度" id="DdD-BB-VZ2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="MG7-2V-n8c">
+                                        <rect key="frame" x="20" y="405.66666603088379" width="350" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MG7-2V-n8c" id="ZjA-MJ-Sg6">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xIW-rF-Dpq">
+                                                    <rect key="frame" x="9" y="13" width="333" height="134"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O7f-zo-Avh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="134"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usQ-h5-pnb">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="完全去冰">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99m-jl-pRJ">
+                                                                    <rect key="frame" x="0.0" y="48" width="105.66666666666667" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="少冰">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fug-bf-A6e">
+                                                                    <rect key="frame" x="0.0" y="96" width="105.66666666666667" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="熱">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bo4-5c-iD9">
+                                                            <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="134"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgH-fG-bnV">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="去冰">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qam-s9-gYx">
+                                                                    <rect key="frame" x="0.0" y="48" width="105.66666666666667" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="正常">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmR-p7-rPQ">
+                                                                    <rect key="frame" x="0.0" y="96" width="105.66666666666667" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="溫熱">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-1o-8Ze">
+                                                            <rect key="frame" x="227.33333333333334" y="0.0" width="105.66666666666666" height="86"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usd-1T-6Bc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="微冰">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83C-uZ-1rY">
+                                                                    <rect key="frame" x="0.0" y="48" width="105.66666666666667" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="多冰">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="甜度" id="gKL-tq-UQ5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="QT1-t1-6ZM">
+                                        <rect key="frame" x="20" y="615.33333206176758" width="350" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QT1-t1-6ZM" id="Dvl-Ej-gUX">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="nQq-bU-ElY">
+                                                    <rect key="frame" x="16" y="13" width="318" height="134"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-Ym-VTW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="134"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbZ-z1-lbe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="無糖">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNW-V0-mF4">
+                                                                    <rect key="frame" x="0.0" y="48" width="85.333333333333329" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="半糖">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLP-4Q-XxN">
+                                                                    <rect key="frame" x="0.0" y="96" width="85.333333333333329" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="多糖">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4V3-GX-vnC">
+                                                            <rect key="frame" x="116.33333333333334" y="0.0" width="85.333333333333343" height="86"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcj-tq-cK9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="一分糖">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIZ-lO-S9Y">
+                                                                    <rect key="frame" x="0.0" y="48" width="85.333333333333329" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="少糖">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xCg-Bg-e8F">
+                                                            <rect key="frame" x="232.66666666666666" y="0.0" width="85.333333333333343" height="86"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hf-v2-g1H">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="微糖">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjh-AJ-Oie">
+                                                                    <rect key="frame" x="0.0" y="48" width="85.333333333333329" height="38"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="正常糖">
+                                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="加料（最多可選2項）" id="zYc-IG-8em">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="57" id="FMl-Ml-7pz">
+                                        <rect key="frame" x="20" y="824.99999809265137" width="350" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FMl-Ml-7pz" id="Xo4-kw-9lb">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5i-3J-VKS">
+                                                    <rect key="frame" x="138" y="8" width="35" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="L">
+                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gde-Tc-OUL">
+                                                    <rect key="frame" x="215" y="8" width="49" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="XL">
+                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <color key="baseBackgroundColor" name="teatopblue"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="nHV-q3-9R3" id="tsX-OC-0jU"/>
+                            <outlet property="delegate" destination="nHV-q3-9R3" id="fGu-6C-TcQ"/>
+                        </connections>
+                    </tableView>
+                    <size key="freeformSize" width="390" height="1100"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aea-U9-cCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776.9230769230769" y="855.21327014218002"/>
         </scene>
         <!--飲品-->
         <scene sceneID="tne-QT-ifu">
@@ -677,7 +1047,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWI-ld-znP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2156.9230769230767" y="860.90047393364921"/>
+            <point key="canvasLocation" x="-1143" y="67"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vgV-PQ-nfy">
@@ -715,13 +1085,16 @@
             <color red="0.86299997568130493" green="0.45500001311302185" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="teatopblue">
-            <color red="0.082000002264976501" green="0.21600000560283661" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.082352941176470587" green="0.21568627450980393" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

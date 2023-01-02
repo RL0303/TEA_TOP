@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E08065F2962D3FD00584640 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E08065E2962D3FD00584640 /* ShopDetailViewController.swift */; };
+		6E0806612962D43C00584640 /* ShopDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0806602962D43C00584640 /* ShopDetailTableViewController.swift */; };
 		6E3C4D65295D97BC004E60AB /* ShopCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C4D64295D97BC004E60AB /* ShopCollectionReusableView.swift */; };
 		6E3C4D67295D9818004E60AB /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C4D66295D9818004E60AB /* ShopCollectionViewCell.swift */; };
 		6E4857652951B8DF0063BEAB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4857642951B8DF0063BEAB /* MenuViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E08065E2962D3FD00584640 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		6E0806602962D43C00584640 /* ShopDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailTableViewController.swift; sourceTree = "<group>"; };
 		6E3C4D64295D97BC004E60AB /* ShopCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionReusableView.swift; sourceTree = "<group>"; };
 		6E3C4D66295D9818004E60AB /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
 		6E4857642951B8DF0063BEAB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 			children = (
 				6E4857642951B8DF0063BEAB /* MenuViewController.swift */,
 				6E718763295D90CA00A55602 /* ShopViewController.swift */,
+				6E08065E2962D3FD00584640 /* ShopDetailViewController.swift */,
+				6E0806602962D43C00584640 /* ShopDetailTableViewController.swift */,
 				6EC57E86295431A3009FF256 /* MenuDetailViewController.swift */,
 				6EC57E8829546E00009FF256 /* StoreViewController.swift */,
 			);
@@ -213,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E0806612962D43C00584640 /* ShopDetailTableViewController.swift in Sources */,
 				6ED1D13A29547E7800F2985F /* StoreTableViewCell.swift in Sources */,
 				6EBCED87294C62C1004911AB /* AppDelegate.swift in Sources */,
 				6E6693F32950645A006F2986 /* OrderDrink.swift in Sources */,
@@ -229,6 +236,7 @@
 				6E3C4D65295D97BC004E60AB /* ShopCollectionReusableView.swift in Sources */,
 				6E718764295D90CA00A55602 /* ShopViewController.swift in Sources */,
 				6E6693F529506466006F2986 /* Order.swift in Sources */,
+				6E08065F2962D3FD00584640 /* ShopDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
