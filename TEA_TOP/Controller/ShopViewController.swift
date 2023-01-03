@@ -47,6 +47,7 @@ class ShopViewController: UIViewController {
     
     
     @IBAction func unwindToShopView(_ segue: UIStoryboardSegue) {
+        updateCartButton()
     }
 
     // MARK: - Cart Button
@@ -57,9 +58,10 @@ class ShopViewController: UIViewController {
             totalNumberOfCup += orderDrink.numberOfCup
             totalPrice += orderDrink.numberOfCup * orderDrink.pricePerCup
         }
+        
         cartButton.configuration?.title = "購物車 $\(totalPrice)"
-//        guard let customFont = UIFont(name: "jf-openhuninn-1.1", size: 20) else { return }
-//        cartButton.configuration?.attributedTitle?.font = customFont
+        cartButton.configuration?.attributedTitle?.font = UIFont(name: "GillSans-SemiBold", size: 20)
+        
         if totalNumberOfCup > 0 {
             numberOfCupLabel.isHidden = false
             numberOfCupLabel.text = "\(totalNumberOfCup)"

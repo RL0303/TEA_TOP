@@ -80,7 +80,9 @@ class StoreViewController: UIViewController {
                 for idx in 0..<locationButtons.count {
                     if idx < locations.count {
                         locationButtons[idx].isHidden = false
-                        locationButtons[idx].setTitle(locations[idx], for: .normal)
+//                        locationButtons[idx].setTitle(locations[idx], for: .normal)
+                        locationButtons[idx].configuration?.title = locations[idx]
+                        locationButtons[idx].configuration?.attributedTitle?.font = UIFont(name: "GillSans-SemiBold", size: 20)
                         print("show", idx)
                     } else {
                         locationButtons[idx].isHidden = true

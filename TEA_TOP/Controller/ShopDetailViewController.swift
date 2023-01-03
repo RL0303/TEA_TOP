@@ -41,6 +41,7 @@ class ShopDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         nameLabel.text = drink.name
         updateTotalPriceLabel()
+//        print("detail")
     }
     
     @IBAction func numberStepper(_ sender: UIStepper) {
@@ -64,7 +65,7 @@ class ShopDetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "updateOrderDrink" {
+        if segue.identifier == "unwindToShopView" {
             orderDrinks += [orderDrink]
         }
     }
