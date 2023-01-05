@@ -20,6 +20,7 @@ class CartViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         updateTotalPrice()
+        self.isModalInPresentation = true
     }
     
     func updateTotalPrice() {
@@ -44,10 +45,65 @@ class CartViewController: UIViewController {
             controller.totalNumberOfCupString = totalNumberOfCupLabel.text!
         }
     }
-    
-    
-    
 
-    
+}
 
+// MARK: - TableView
+extension CartViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return orderDrinks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(CartTableViewCell.self)", for: indexPath) as! CartTableViewCell
+        
+        cell.delagate = self
+        
+        let orderDrink = orderDrinks[indexPath.row]
+        cell.valueUpButton.tag = indexPath.row
+        cell.valueDownButton.tag = indexPath.row
+        cell.drinkImageView.image = UIImage(named: "招牌高山青") //orderDrink.drink.name
+        cell.drinkNameLabel.text = orderDrink.drink.name
+        var toppingString: String = ""
+        for topping in orderDrink.toppings {
+            toppingString += "/\(topping)"
+        }
+        cell.drinkDetailLabel.text = "\(orderDrink.size)/\(orderDrink.sugar)/\(orderDrink.temperature)\(toppingString)/$\(orderDrink.pricePerCup)"
+        cell.numberOfCupLabel.text = "\(orderDrink.numberOfCup)杯"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        orderDrinks.remove(at: indexPath.row)
+//        tableView.deleteRows(at: [indexPath], with: .automatic)
+        tableView.reloadData()
+        updateTotalPrice()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 210
+    }
+    
+}
+
+// MARK: - TableViewCellDelegate
+extension CartViewController: CartTableViewCellDelegate {
+    func didTapValueDownButton(with cellIndex: Int) {
+        if orderDrinks[cellIndex].numberOfCup > 1 {
+            orderDrinks[cellIndex].numberOfCup -= 1
+            updateTotalPrice()
+            let indexPath = IndexPath(row: cellIndex, section: 0)
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
+    }
+    
+    func didTapValueUpButton(with cellIndex: Int) {
+        if orderDrinks[cellIndex].numberOfCup < 99 {
+            orderDrinks[cellIndex].numberOfCup += 1
+            updateTotalPrice()
+            let indexPath = IndexPath(row: cellIndex, section: 0)
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
+    }
 }

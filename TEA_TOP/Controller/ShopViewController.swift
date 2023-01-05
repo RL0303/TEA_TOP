@@ -35,7 +35,7 @@ class ShopViewController: UIViewController {
         categorizeDrinks()
     }
     
-
+    
     // MARK: - Segue
     @IBSegueAction func showShopDetail(_ coder: NSCoder) -> ShopDetailViewController? {
         guard let indexPath = collectionView.indexPathsForSelectedItems else { return ShopDetailViewController(coder: coder, drink: allDrinks[0])}
@@ -80,6 +80,7 @@ class ShopViewController: UIViewController {
             cartButton.alpha = 0.8
         } else {
             cartButton.configuration?.title = "購物車 $\(totalPrice)"
+            cartButton.configuration?.attributedTitle?.font = UIFont(name: "GillSans-SemiBold", size: 20)
             cartButton.alpha = 1.0
 //            guard let customFont = UIFont(name: "jf-openhuninn-1.1", size: 20) else { return }
 //            cartButton.configuration?.attributedTitle?.font = customFont
