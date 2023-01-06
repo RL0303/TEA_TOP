@@ -66,8 +66,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpV-a5-Uve">
                                         <rect key="frame" x="10" y="5" width="455" height="38"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hzZ-rT-O8D">
-                                                <rect key="frame" x="0.0" y="0.0" width="445" height="38"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hzZ-rT-O8D">
+                                                <rect key="frame" x="0.0" y="0.0" width="425" height="38"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boQ-1T-CkY">
                                                         <rect key="frame" x="0.0" y="0.0" width="65" height="38"/>
@@ -81,7 +81,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpw-gc-ITp">
-                                                        <rect key="frame" x="95" y="0.0" width="65" height="38"/>
+                                                        <rect key="frame" x="90" y="0.0" width="65" height="38"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="新北">
                                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -92,7 +92,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nw-nK-vCN">
-                                                        <rect key="frame" x="190" y="0.0" width="65" height="38"/>
+                                                        <rect key="frame" x="180" y="0.0" width="65" height="38"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="桃園">
                                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -103,7 +103,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ju6-Jq-8cf">
-                                                        <rect key="frame" x="285" y="0.0" width="65" height="38"/>
+                                                        <rect key="frame" x="270" y="0.0" width="65" height="38"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="宜蘭">
                                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -114,7 +114,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg1-hj-VG0">
-                                                        <rect key="frame" x="380" y="0.0" width="65" height="38"/>
+                                                        <rect key="frame" x="360" y="0.0" width="65" height="38"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="宜蘭">
                                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -251,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qza-cG-sNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1143" y="861"/>
+            <point key="canvasLocation" x="-1143.0769230769231" y="860.90047393364921"/>
         </scene>
         <!--訂購-->
         <scene sceneID="5QJ-TF-CSw">
@@ -810,9 +810,11 @@
                         <outlet property="nameTextField" destination="y5Z-5N-yU3" id="v8D-ob-RsN"/>
                         <outlet property="phoneTextField" destination="8Xf-BE-jGH" id="tvj-th-aDY"/>
                         <outlet property="storeTextField" destination="Psl-bF-qe8" id="Szv-gf-tbP"/>
+                        <segue destination="OVl-4w-2Vc" kind="unwind" identifier="unwindToCartInfoView" unwindAction="unwindToCartInfoView:" id="zH8-LH-Msi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOV-Si-XgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="OVl-4w-2Vc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1756.9230769230769" y="1709.0047393364928"/>
         </scene>
@@ -825,13 +827,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5Qw-Ha-Xcx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchStoreTableViewCell" id="5Qw-Ha-Xcx">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Qw-Ha-Xcx" id="vkD-qi-Jla">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="oeI-Gs-Myi" kind="unwind" unwindAction="unwindToCartInfoTableView:" id="tRu-3K-hik"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -842,6 +847,7 @@
                     <navigationItem key="navigationItem" id="I6m-Dl-2Br"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KR3-yb-veb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="oeI-Gs-Myi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3490.7692307692305" y="1692.2985781990521"/>
         </scene>
@@ -925,7 +931,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uYi-tL-Lpt">
                                                             <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="134"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-9k-Lc0">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-9k-Lc0">
                                                                     <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="完全去冰">
@@ -936,7 +942,7 @@
                                                                         <action selector="temperatureButtonPressed:" destination="PCp-43-sdn" eventType="touchUpInside" id="CN2-x0-pQ3"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-QC-rA7">
+                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-QC-rA7">
                                                                     <rect key="frame" x="0.0" y="48" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="少冰">
@@ -947,7 +953,7 @@
                                                                         <action selector="temperatureButtonPressed:" destination="PCp-43-sdn" eventType="touchUpInside" id="Jhg-cT-8UN"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI5-ru-djH">
+                                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI5-ru-djH">
                                                                     <rect key="frame" x="0.0" y="96" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="熱">
@@ -963,7 +969,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LSR-hM-roL">
                                                             <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="134"/>
                                                             <subviews>
-                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-Gm-U8d">
+                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-Gm-U8d">
                                                                     <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="去冰">
@@ -974,7 +980,7 @@
                                                                         <action selector="temperatureButtonPressed:" destination="PCp-43-sdn" eventType="touchUpInside" id="Tfs-GU-gz8"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-pO-4dZ">
+                                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-pO-4dZ">
                                                                     <rect key="frame" x="0.0" y="48" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="正常">
@@ -985,7 +991,7 @@
                                                                         <action selector="temperatureButtonPressed:" destination="PCp-43-sdn" eventType="touchUpInside" id="9OJ-zH-WQ4"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-cS-ita">
+                                                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-cS-ita">
                                                                     <rect key="frame" x="0.0" y="96" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="溫熱">

@@ -24,9 +24,31 @@ class SearchStoreTableViewController: UITableViewController {
         // show all stores information as default
         filteredStores = allStores
     }
-
     
+    // MARK: - Table view data source
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredStores.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchStoreTableViewCell", for: indexPath)
+        let store = filteredStores[indexPath.row]
+        cell.textLabel?.text = store.name
+        return cell
+    }
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwindToCartInfoTableView" {
+            let controller = segue.destination as! CartInfoTableViewController
+            let store = filteredStores[tableView.indexPathForSelectedRow!.row]
+            controller.store = store.name
+        }
+    }
 }
 
 extension SearchStoreTableViewController: UISearchResultsUpdating {

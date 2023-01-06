@@ -69,6 +69,7 @@ class CartInfoTableViewController: UITableViewController {
 
     // 點畫面任意位置，收鍵盤
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touchesBegan")
 //        self.view.endEditing(true)
 //    }
 }
@@ -85,13 +86,13 @@ extension CartInfoTableViewController: UITextFieldDelegate, UITextViewDelegate {
     }
     
     
-//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//        // close keyboard when entering "return" in memoTextView
-//        if text == "\n" {
-//            memoTextView.resignFirstResponder()
-//            performSegue(withIdentifier: "unwindToCartInfoView", sender: nil)
-//            return false
-//        }
-//        return true
-//    }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        // close keyboard when entering "return" in memoTextView
+        if text == "\n" {
+            memoTextView.resignFirstResponder()
+            performSegue(withIdentifier: "unwindToCartInfoView", sender: nil)
+            return false
+        }
+        return true
+    }
 }
