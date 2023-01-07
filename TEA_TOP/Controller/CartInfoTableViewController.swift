@@ -40,9 +40,19 @@ class CartInfoTableViewController: UITableViewController {
         
         nameTextField.addTarget(self, action: #selector(CartInfoTableViewController.textFieldDidChange(_:)), for: .editingChanged)
         phoneTextField.addTarget(self, action: #selector(CartInfoTableViewController.textFieldDidChange(_:)), for: .editingChanged)
+        
+        // 點擊空白處讓鍵盤消失
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard))
+                self.view.addGestureRecognizer(tap)
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
+        performSegue(withIdentifier: "unwindToCartInfoView", sender: nil)
+    }
+    
+    @objc func dismissKeyBoard() {
+        print("dismissKeyBoard")
+        self.view.endEditing(true)
         performSegue(withIdentifier: "unwindToCartInfoView", sender: nil)
     }
     
@@ -66,12 +76,6 @@ class CartInfoTableViewController: UITableViewController {
             controller.order = order!
         }
     }
-
-    // 點畫面任意位置，收鍵盤
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        print("touchesBegan")
-//        self.view.endEditing(true)
-//    }
 }
 
 extension CartInfoTableViewController: UITextFieldDelegate, UITextViewDelegate {
@@ -93,6 +97,7 @@ extension CartInfoTableViewController: UITextFieldDelegate, UITextViewDelegate {
             performSegue(withIdentifier: "unwindToCartInfoView", sender: nil)
             return false
         }
+        
         return true
     }
 }

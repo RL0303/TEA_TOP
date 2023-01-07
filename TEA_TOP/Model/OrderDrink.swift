@@ -68,8 +68,8 @@ struct OrderDrinkData: Codable {
 
 
 // MARK: - Upload
-func uploadOrderDrink(orderDrink: OrderDrink, orderNo: String) {
-    let orderDrinkBody = getOrderDrinkBody(orderDrink: orderDrink, orderNo: orderNo)
+func uploadOrderDrink(orderDrink: OrderDrink, orderNo: String, order: Order) {
+    let orderDrinkBody = getOrderDrinkBody(orderDrink: orderDrink, orderNo: orderNo, order: order)
     let urlString = "https://api.airtable.com/v0/\(appId)/OrderDrink?api_key=\(apiKey)"
     if let url = URL(string: urlString) {
         var request = URLRequest(url: url)
@@ -93,12 +93,12 @@ func uploadOrderDrink(orderDrink: OrderDrink, orderNo: String) {
     }
 }
 
-func getOrderDrinkBody(orderDrink: OrderDrink, orderNo: String) -> OrderDrinkData {
+func getOrderDrinkBody(orderDrink: OrderDrink, orderNo: String, order: Order) -> OrderDrinkData {
     let orderDrinkBody = OrderDrinkData(
         records: [.init(
             id: nil,
             fields: .init(
-                customerName: orderDrink.customerName,
+                customerName: order.name,
                 drink: orderDrink.drink.name,
                 size: orderDrink.size,
                 sugar: orderDrink.sugar,

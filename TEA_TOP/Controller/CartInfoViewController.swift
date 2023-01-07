@@ -32,7 +32,7 @@ class CartInfoViewController: UIViewController {
         } else if order.store == "" {
             showAlert(message: "請選擇取貨門市")
         } else {
-//            uploadOrder(order: order)
+            uploadOrder(order: order)
         }
     }
     
@@ -45,6 +45,62 @@ class CartInfoViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func saveOrderNoToUserDefault() {
+        let userDefault = UserDefaults.standard
+        if var orderNos = userDefault.array(forKey: "orderNos") {
+            orderNos += [order.orderNo]
+            userDefault.set(orderNos, forKey: "orderNos")
+        } else {
+            let orderNos = [order.orderNo]
+            userDefault.set(orderNos, forKey: "orderNos")
+        }
+    }
+    
+    func uploadOrder(order: Order){
+        let orderBody = getOrderBody(order: order)
+        let urlString = "https://api.airtable.com/v0/\(appId)/Order?api_key=\(apiKey)"
+        if let url = URL(string: urlString) {
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            let encoder = JSONEncoder()
+            request.httpBody = try? encoder.encode(orderBody)
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let data = data {
+                        let orderData: OrderData = decodeJsonData(data)
+                        // 取得AirTable自動生成的資料編號作為訂單編號
+                        if let orderNo = orderData.records[0].id {
+                            self.order.orderNo = orderNo
+                    }
+                }
+                // 上傳訂購飲品資料(OrderDrink)
+                for orderDrink in orderDrinks {
+                    uploadOrderDrink(orderDrink: orderDrink, orderNo: self.order.orderNo, order: order)
+                }
+                // 將訂單編號儲存到UserDefault
+                self.saveOrderNoToUserDefault()
+                // 上傳完資料後回到訂購頁面
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "completeOrder", sender: nil)
+                }
+            }.resume()
+        }
+    }
+    
+    func getOrderBody(order: Order) -> OrderData {
+        let orderBody = OrderData(
+            records: [.init(
+                id: nil,
+                fields: .init(
+                    name: order.name,
+                    phone: order.phone,
+                    store: order.store,
+                    date: order.date,
+                    memo: order.memo)
+        )])
+        return orderBody
     }
 
 }

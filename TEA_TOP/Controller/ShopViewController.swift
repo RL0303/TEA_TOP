@@ -49,6 +49,13 @@ class ShopViewController: UIViewController {
     @IBAction func unwindToShopView(_ segue: UIStoryboardSegue) {
         updateCartButton()
     }
+    
+    @IBAction func completeOrder(_ unwindSegue: UIStoryboardSegue) {
+        orderDrinks = []
+        updateCartButton()
+    }
+    
+    
 
     // MARK: - Cart Button
     func updateCartButton() {
