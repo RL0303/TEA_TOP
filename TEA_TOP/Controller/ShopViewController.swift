@@ -84,7 +84,7 @@ class ShopViewController: UIViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > lastScrollViewOffsetY {
             cartButton.configuration?.title = ""
-            cartButton.alpha = 0.8
+            cartButton.alpha = 0.85
         } else {
             cartButton.configuration?.title = "購物車 $\(totalPrice)"
             cartButton.configuration?.attributedTitle?.font = UIFont(name: "GillSans-SemiBold", size: 20)
@@ -132,7 +132,7 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShopCollectionViewCell.self)", for: indexPath) as! ShopCollectionViewCell
         let drink = drinkCategories[indexPath.section].drinks[indexPath.row]
-        cell.imageView.image = UIImage(named: "招牌高山青") //UIImage(named: drink.name)
+        cell.imageView.image = UIImage(named: drink.name)
         cell.nameLabel.text = drink.name
         cell.cellBackgroundView.layer.cornerRadius = 15
         cell.cellBackgroundView.layer.borderWidth = 2

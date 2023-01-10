@@ -72,6 +72,7 @@ class CartInfoViewController: UIViewController {
                         let orderData: OrderData = decodeJsonData(data)
                         // 取得AirTable自動生成的資料編號作為訂單編號
                         if let orderNo = orderData.records[0].id {
+                            print("orderNo:\(orderNo)")
                             self.order.orderNo = orderNo
                     }
                 }

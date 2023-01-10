@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hCl-Hp-5zO" userLabel="Area Stack View">
                                 <rect key="frame" x="15" y="73" width="360" height="38"/>
                                 <subviews>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzC-go-Rhn">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzC-go-Rhn">
                                         <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="北部">
@@ -33,7 +33,7 @@
                                             <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ne-1X-oWx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXI-yE-Eno">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXI-yE-Eno">
                                         <rect key="frame" x="133.33333333333334" y="0.0" width="93.333333333333343" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="中部">
@@ -45,7 +45,7 @@
                                             <action selector="categoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hw5-xY-5eq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqF-Hu-8Rd">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqF-Hu-8Rd">
                                         <rect key="frame" x="266.66666666666669" y="0.0" width="93.333333333333314" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="南部">
@@ -932,7 +932,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uYi-tL-Lpt">
                                                             <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="134"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-9k-Lc0">
+                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-9k-Lc0">
                                                                     <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="完全去冰">
@@ -943,7 +943,7 @@
                                                                         <action selector="temperatureButtonPressed:" destination="PCp-43-sdn" eventType="touchUpInside" id="CN2-x0-pQ3"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-QC-rA7">
+                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-QC-rA7">
                                                                     <rect key="frame" x="0.0" y="48" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="少冰">
@@ -954,7 +954,7 @@
                                                                         <action selector="temperatureButtonPressed:" destination="PCp-43-sdn" eventType="touchUpInside" id="Jhg-cT-8UN"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI5-ru-djH">
+                                                                <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI5-ru-djH">
                                                                     <rect key="frame" x="0.0" y="96" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="溫">
@@ -970,7 +970,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LSR-hM-roL">
                                                             <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="134"/>
                                                             <subviews>
-                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-Gm-U8d">
+                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-Gm-U8d">
                                                                     <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="去冰">
@@ -981,7 +981,7 @@
                                                                         <action selector="temperatureButtonPressed:" destination="PCp-43-sdn" eventType="touchUpInside" id="Tfs-GU-gz8"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-pO-4dZ">
+                                                                <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-pO-4dZ">
                                                                     <rect key="frame" x="0.0" y="48" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="正常">
@@ -992,7 +992,7 @@
                                                                         <action selector="temperatureButtonPressed:" destination="PCp-43-sdn" eventType="touchUpInside" id="9OJ-zH-WQ4"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-cS-ita">
+                                                                <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-cS-ita">
                                                                     <rect key="frame" x="0.0" y="96" width="105.66666666666667" height="38"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="熱">
@@ -1334,6 +1334,242 @@
             </objects>
             <point key="canvasLocation" x="1756.9230769230769" y="860.90047393364921"/>
         </scene>
+        <!--訂單-->
+        <scene sceneID="28m-90-ayJ">
+            <objects>
+                <tableViewController id="uVZ-uQ-aRv" customClass="OrderTableViewController" customModule="TEA_TOP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="T20-x9-4yB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="F0i-Qs-iZp">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂單" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDq-nH-0U5">
+                                    <rect key="frame" x="20" y="13.666666666666666" width="136" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="teatopblue"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderTableVIewCell" rowHeight="140" id="7g0-EW-lk0" customClass="OrderTableVIewCell" customModule="TEA_TOP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94.666666030883789" width="390" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7g0-EW-lk0" id="FHK-av-ZOQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂購人：Robert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDe-mb-zjM">
+                                            <rect key="frame" x="38" y="58" width="270" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="聯絡電話：0912311123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USL-Ev-RBG">
+                                            <rect key="frame" x="38" y="90" width="296" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CUG-t4-8dk">
+                                            <rect key="frame" x="34" y="11" width="322" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="台北萬隆店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7q-4Z-BSg">
+                                                    <rect key="frame" x="5" y="6" width="198" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2022-01-10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTn-pq-HMz">
+                                                    <rect key="frame" x="179" y="6.333333333333333" width="135" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="teatop"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="dTn-pq-HMz" id="DAq-vs-wfs"/>
+                                    <outlet property="nameLabel" destination="ZDe-mb-zjM" id="xsN-2c-7oa"/>
+                                    <outlet property="phoneLabel" destination="USL-Ev-RBG" id="GHO-zh-PB7"/>
+                                    <outlet property="storeLabel" destination="B7q-4Z-BSg" id="Ega-I8-sBO"/>
+                                    <segue destination="VOd-RN-kUN" kind="show" destinationCreationSelector="showOrderDetail:" id="1QH-WK-2Ki"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uVZ-uQ-aRv" id="F9l-Bx-Kth"/>
+                            <outlet property="delegate" destination="uVZ-uQ-aRv" id="bzc-Bc-9K0"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="訂單" image="list.bullet.rectangle.portrait" catalog="system" id="Hm1-KI-hKn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weZ-JK-GV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841.53846153846155" y="-644.07582938388623"/>
+        </scene>
+        <!--Order Detail Table View Controller-->
+        <scene sceneID="WUv-iH-Dxr">
+            <objects>
+                <tableViewController id="VOd-RN-kUN" customClass="OrderDetailTableViewController" customModule="TEA_TOP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="PXi-sV-VnN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="YyP-BQ-QcP">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-DD-jmq">
+                                    <rect key="frame" x="34" y="61" width="322" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2022-01-10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-cw-qlX">
+                                            <rect key="frame" x="5" y="6.333333333333333" width="136" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$150 / 3杯" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB0-od-VXG">
+                                            <rect key="frame" x="181" y="6" width="136" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="teatop"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="聯絡電話：0912311123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-UN-OzT">
+                                    <rect key="frame" x="34" y="145" width="266" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVe-YS-83T">
+                                    <rect key="frame" x="0.0" y="-2" width="390" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="台北萬隆店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-NQ-Yop">
+                                            <rect key="frame" x="20" y="14" width="335" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="teatopblue"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂購人：Robert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZu-1K-0Bx">
+                                    <rect key="frame" x="34" y="113" width="253" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderDetailTableViewCell" rowHeight="165" id="AWv-k4-rra" customClass="OrderDetailTableViewCell" customModule="TEA_TOP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="244.66666603088379" width="390" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AWv-k4-rra" id="2F8-GL-VJF">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6O1-gz-0y6">
+                                            <rect key="frame" x="16.333333333333343" y="20.666666666666671" width="355" height="126.00000000000001"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="招牌高山青" id="7IE-Hg-4Ay">
+                                                    <rect key="frame" x="0.0" y="8" width="110" height="110"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r0C-wD-Ieb">
+                                                    <rect key="frame" x="110.00000000000001" y="18" width="234.33333333333337" height="92"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="招牌高山青" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QC-ac-F2U">
+                                                            <rect key="frame" x="0.0" y="0.0" width="102" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L/無糖/完全去冰/珍珠/$40" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmJ-4n-IXd">
+                                                            <rect key="frame" x="0.0" y="34.000000000000007" width="234.33333333333334" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1杯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chZ-yg-9sf">
+                                                            <rect key="frame" x="0.0" y="68" width="29.666666666666668" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="r0C-wD-Ieb" firstAttribute="top" secondItem="6O1-gz-0y6" secondAttribute="top" constant="18" id="Bka-Fp-5Wc"/>
+                                                <constraint firstAttribute="trailing" secondItem="r0C-wD-Ieb" secondAttribute="trailing" constant="10.67" id="gZp-qZ-2dS"/>
+                                                <constraint firstAttribute="width" constant="355" id="hIC-35-6yY"/>
+                                                <constraint firstAttribute="height" constant="126" id="tv7-3M-ZTj"/>
+                                                <constraint firstAttribute="bottom" secondItem="r0C-wD-Ieb" secondAttribute="bottom" constant="16" id="ue4-jT-yOj"/>
+                                                <constraint firstItem="r0C-wD-Ieb" firstAttribute="leading" secondItem="7IE-Hg-4Ay" secondAttribute="trailing" id="v0P-ug-Fa9"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6O1-gz-0y6" firstAttribute="top" secondItem="2F8-GL-VJF" secondAttribute="top" constant="20.670000000000002" id="HiA-Yu-q0m"/>
+                                        <constraint firstItem="6O1-gz-0y6" firstAttribute="leading" secondItem="2F8-GL-VJF" secondAttribute="leading" constant="16.329999999999998" id="QXU-xo-jpj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="drinkDetailLabel" destination="wmJ-4n-IXd" id="mba-tR-P2r"/>
+                                    <outlet property="drinkImageView" destination="7IE-Hg-4Ay" id="XgI-Q0-ihT"/>
+                                    <outlet property="drinkNameLabel" destination="0QC-ac-F2U" id="Lw9-9k-tzj"/>
+                                    <outlet property="numberOfCupLabel" destination="chZ-yg-9sf" id="qzr-ng-jcm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VOd-RN-kUN" id="0R5-6u-JNz"/>
+                            <outlet property="delegate" destination="VOd-RN-kUN" id="9ys-Ls-VHc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ZuH-BX-a33"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="fSF-cw-qlX" id="4jl-HJ-XNk"/>
+                        <outlet property="nameLabel" destination="VZu-1K-0Bx" id="X5I-zs-EWT"/>
+                        <outlet property="phoneLabel" destination="uZf-UN-OzT" id="7i2-oe-zyh"/>
+                        <outlet property="storeLabel" destination="Cep-NQ-Yop" id="haw-DC-djr"/>
+                        <outlet property="totalPriceLabel" destination="YB0-od-VXG" id="rhY-H5-ZiV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iR-rA-cmO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1627.6923076923076" y="-644.07582938388623"/>
+        </scene>
         <!--飲品-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -1400,7 +1636,7 @@
                                     <constraint firstItem="TRZ-nm-fLb" firstAttribute="top" secondItem="FcF-QT-73B" secondAttribute="top" constant="20" id="0Sx-gZ-Iv4"/>
                                     <constraint firstItem="TRZ-nm-fLb" firstAttribute="bottom" secondItem="FcF-QT-73B" secondAttribute="bottom" id="8AP-kY-4ZH"/>
                                     <constraint firstItem="TRZ-nm-fLb" firstAttribute="leading" secondItem="FcF-QT-73B" secondAttribute="leading" constant="15" id="Ew5-Jm-7fX"/>
-                                    <constraint firstItem="TRZ-nm-fLb" firstAttribute="trailing" secondItem="FcF-QT-73B" secondAttribute="trailing" id="ZuN-wi-9g1"/>
+                                    <constraint firstItem="TRZ-nm-fLb" firstAttribute="trailing" secondItem="FcF-QT-73B" secondAttribute="trailing" constant="-20" id="ZuN-wi-9g1"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="FcF-QT-73B"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="jl0-uf-DaI"/>
@@ -1410,11 +1646,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuTableViewCell" rowHeight="140" id="SCc-lo-vVV" customClass="MenuTableViewCell" customModule="TEA_TOP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="140"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuTableViewCell" rowHeight="150" id="SCc-lo-vVV" customClass="MenuTableViewCell" customModule="TEA_TOP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SCc-lo-vVV" id="RU8-MY-jd5">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="140"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpM-gN-OgV">
@@ -1605,7 +1841,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="招牌高山青" translatesAutoresizingMaskIntoConstraints="NO" id="mcr-fv-vpy">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="青茶3Q" translatesAutoresizingMaskIntoConstraints="NO" id="mcr-fv-vpy">
                                             <rect key="frame" x="91" y="198" width="208" height="229"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -1644,6 +1880,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Wfs-gb-FEV"/>
                         <segue destination="qT7-MB-1xR" kind="relationship" relationship="viewControllers" id="fjh-w8-Zio"/>
                         <segue destination="EB7-di-pBL" kind="relationship" relationship="viewControllers" id="sZh-aM-byW"/>
+                        <segue destination="uVZ-uQ-aRv" kind="relationship" relationship="viewControllers" id="ZFU-Jj-iVg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jff-0t-xiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1673,6 +1910,7 @@
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="menucard" catalog="system" width="107" height="128"/>
@@ -1680,6 +1918,7 @@
         <image name="place" width="24" height="24"/>
         <image name="time" width="24" height="24"/>
         <image name="招牌高山青" width="249" height="350"/>
+        <image name="青茶3Q" width="249" height="350"/>
         <namedColor name="teatop">
             <color red="0.86299997568130493" green="0.45500001311302185" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

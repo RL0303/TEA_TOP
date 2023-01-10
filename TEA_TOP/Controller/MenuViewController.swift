@@ -188,7 +188,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return 150
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -199,7 +199,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource{
         cell.drinkbackgroundView.layer.borderWidth = 2
         cell.drinkbackgroundView.layer.borderColor = .init(red: 0, green: 0, blue: 0, alpha: 1)
         cell.drinkbackgroundView.backgroundColor = .white
-        cell.drinkImageView.image = UIImage(named: "招牌高山青") //drink.name)
+        cell.drinkImageView.image = UIImage(named: drink.name)
         cell.nameLabel.text = drink.name
         
         // Check if the drink has L size option

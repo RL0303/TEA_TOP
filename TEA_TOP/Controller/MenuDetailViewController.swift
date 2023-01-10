@@ -38,7 +38,7 @@ class MenuDetailViewController: UIViewController {
     
     // MARK: - Update View
     func updateView() {
-        imageView.image = UIImage(named: "招牌高山青") //drink.name)
+        imageView.image = UIImage(named: drink.name)
         nameLabel.text = drink.name
         if drink.priceL == nil {
             lLabel.isHidden = true

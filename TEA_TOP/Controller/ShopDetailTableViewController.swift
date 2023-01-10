@@ -44,7 +44,7 @@ class ShopDetailTableViewController: UITableViewController {
     }
     
     func updateUI() {
-        imageView.image = UIImage(named: "招牌高山青") //drink.name
+        imageView.image = UIImage(named: drink.name)
         
         if drink.priceL == nil {
             sizeButtons[0].isHidden = true

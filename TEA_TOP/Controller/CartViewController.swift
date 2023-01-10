@@ -63,7 +63,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource{
         let orderDrink = orderDrinks[indexPath.row]
         cell.valueUpButton.tag = indexPath.row
         cell.valueDownButton.tag = indexPath.row
-        cell.drinkImageView.image = UIImage(named: "招牌高山青") //orderDrink.drink.name
+        cell.drinkImageView.image = UIImage(named: orderDrink.drink.name)
         cell.drinkNameLabel.text = orderDrink.drink.name
         var toppingString: String = ""
         for topping in orderDrink.toppings {
