@@ -8,14 +8,15 @@
 import Foundation
 import UIKit
 
-//let appId = "tea"
-//let apiKey = "tea"
+
+let appId = "app6wAUBOA7Pf9VEM" //TEA TOP APP (Public)
+let apiKey = "keyKeXCS1yJ9MNk3E"
 
 var allDrinks: [Drink] = []
 var orderDrinks: [OrderDrink] = []
 var allStores: [Store] = []
 
 // OrderDrink
-let sugarList = ["無糖", "一分糖", "二分糖", "微糖", "半糖", "少糖", "正常糖"]
-let temperatureList = ["去冰", "微冰", "少冰", "正常冰", "常溫", "溫", "熱"]
-let toppingList: [String: Int] = ["珍珠": 10, "紅豆": 10, "布丁": 10, "仙草凍": 10, "綠茶凍": 10, "芋圓": 15, "西米露": 10, "脆啵啵球": 15]
+let sugarList = ["無糖", "一分糖", "微糖", "半糖", "少糖", "正常糖", "多糖"]
+let temperatureList = ["完全去冰","去冰", "微冰", "少冰", "正常冰", "多冰", "溫", "熱"]
+let toppingList: [String: Int] = ["珍珠": 5, "椰果": 10, "仙草凍": 10, "西米露": 5, "芋圓": 10, "紅豆": 10, "寒天": 10, "粉粿": 10]
